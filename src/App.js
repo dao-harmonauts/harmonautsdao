@@ -63,7 +63,7 @@ export default function Home() {
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" src="https://dexscreener.com/harmony/0xff7674AB8dc1FF39E5226555C5Fd4919A246A538?embed=1&theme=dark"/>
+          <iframe height="800" width="1400" title="1USDC" src="https://dexscreener.com/harmony/0xff7674AB8dc1FF39E5226555C5Fd4919A246A538?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -76,7 +76,7 @@ export default function Home() {
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" src="https://dexscreener.com/harmony/0x0561827bdcc40a1d3556f5aa32022c81c2175ee8?embed=1&theme=dark"/>
+          <iframe height="800" width="1400" title="WONE" src="https://dexscreener.com/harmony/0x0561827bdcc40a1d3556f5aa32022c81c2175ee8?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" src="https://dexscreener.com/harmony/0xc01537d6d2305408d6045c1B96e88174cbd32b5b?embed=1&theme=dark"/>
+          <iframe height="800" width="1400" title="SONIC" src="https://dexscreener.com/harmony/0xc01537d6d2305408d6045c1B96e88174cbd32b5b?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -102,7 +102,7 @@ export default function Home() {
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" src="https://dexscreener.com/harmony/0x752630C2E39eB9D81fA3F263cF9A9cB81C81CD67?embed=1&theme=dark"/>
+          <iframe height="800" width="1400" title="WARU" src="https://dexscreener.com/harmony/0x752630C2E39eB9D81fA3F263cF9A9cB81C81CD67?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -115,7 +115,7 @@ export default function Home() {
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" src="https://dexscreener.com/harmony/0x05c14496aAe75106aFA5A8E5204A8f0C61f377d5?embed=1&theme=dark"/>
+          <iframe height="800" width="1400" title="HOUND" src="https://dexscreener.com/harmony/0x05c14496aAe75106aFA5A8E5204A8f0C61f377d5?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" src="https://dexscreener.com/harmony/0x32a4fcCc27BE6873541c3667EED11628490aDCa2?embed=1&theme=dark"/>
+          <iframe height="800" width="1400" title="NEURONS" src="https://dexscreener.com/harmony/0x32a4fcCc27BE6873541c3667EED11628490aDCa2?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -141,9 +141,8 @@ export default function Home() {
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" src="https://dexscreener.com/harmony/0x8fE16B69d13577Cac8A3178672935C6e3512913d?embed=1&theme=dark"/>
+          <iframe height="800" width="1400" title="WEEDCOMMERCE" src="https://dexscreener.com/harmony/0x8fE16B69d13577Cac8A3178672935C6e3512913d?embed=1&theme=dark"/>
         </div>
-
 
         {/* <div className="grid">
           <a
