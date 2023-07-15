@@ -6,25 +6,8 @@ export default function Home() {
     <main className="main">
       <div className="container">
         <div className="header">
-          <h1 className="title">
-            Welcome to{" "}
-            <span className="gradient-text-0">
-              <a
-                href="https://thirdweb.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                thirdweb.
-              </a>
-            </span>
-          </h1>
-
-          <p className="description">
-            Get started by configuring your desired network in{" "}
-            <code className="code">src/index.js</code>, then modify the{" "}
-            <code className="code">src/App.js</code> file!
-          </p>
-
+          <h1 className="title">Harmonauts DAO</h1>
+          <p className="description">Get started by connecting your MetMask Wallet to Harmony One BlockChain</p>
           <div className="connect">
             <ConnectWallet
               dropdownPosition={{
@@ -35,7 +18,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid">
+        {/* <div className="grid">
           <a
             href="https://portal.thirdweb.com/"
             className="card"
@@ -92,7 +75,7 @@ export default function Home() {
               </p>
             </div>
           </a>
-        </div>
+        </div> */}
       </div>
     </main>
   );
