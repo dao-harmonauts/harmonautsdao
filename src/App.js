@@ -1,10 +1,65 @@
 import { ConnectWallet, useBalance } from "@thirdweb-dev/react";
-import { NATIVE_TOKEN_ADDRESS } from "@thirdweb-dev/sdk";
+import { useState, useEffect } from "react";
+import { ethers } from "ethers";
 import "./styles/Home.css";
+
+const contractABI = [
+  {
+    "type": "function",
+    "name": "name",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "string",
+        "name": "",
+        "internalType": "string"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "symbol",
+    "inputs": [],
+    "outputs": [
+      {
+        "type": "string",
+        "name": "",
+        "internalType": "string"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "balanceOf",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "owner",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  }
+];
 
 export default function Home() {
 
-  const {data:myNativeToken}=useBalance(NATIVE_TOKEN_ADDRESS);
+  const [myHNAUTSName,setMyHNAUTSName]=useState();
+  const [myHNAUTSSymbol,setMyHNAUTSSymbol]=useState();
+  const [myHNAUTSBalanceOfParsed,setMyHNAUTSBalanceOf]=useState();
+  const [myWHNAUTSName,setMyWHNAUTSName]=useState();
+  const [myWHNAUTSSymbol,setMyWHNAUTSSymbol]=useState();
+  const [myWHNAUTSBalanceOfParsed,setMyWHNAUTSBalanceOf]=useState();
+
   const {data:myHOGBalance}=useBalance("0xa0F92Df550E1E12452C250465E54fDF77B9cf64d");
 
   const {data:my1USDCBalance}=useBalance("0x985458E523dB3d53125813eD68c274899e9DfAb4");
@@ -28,6 +83,42 @@ export default function Home() {
   const {data:myWCBalance}=useBalance("0xA4fE0e18506B3D171c7674698991DfAF238621a6");
   const {data:MyLPWCBalance}=useBalance("0x8fE16B69d13577Cac8A3178672935C6e3512913d");
 
+  useEffect(() => {
+    fetchInfo();
+  }, [])
+
+  async function fetchInfo() {
+    if(typeof window.ethereum !== 'undefined') {
+          const myProvider = new ethers.providers.Web3Provider(window.ethereum);
+    
+          const mySigner = myProvider.getSigner();
+          const myAddress = await mySigner.getAddress();
+
+          const myContractHNAUTS = new ethers.Contract("0xD7745A515beDD91eE9024b6C31dc1E75a10dC618", contractABI, myProvider);
+          const myContractWHNAUTS = new ethers.Contract("0xC29Ca7c72Da0873693BF2d686544C17222EC2659", contractABI, myProvider);
+
+          const myHNAUTSName = await myContractHNAUTS.name();
+          setMyHNAUTSName(myHNAUTSName);
+
+          const myHNAUTSSymbol = await myContractHNAUTS.symbol();
+          setMyHNAUTSSymbol(myHNAUTSSymbol);
+
+          const myHNAUTSBalanceOf = await myContractHNAUTS.balanceOf(myAddress);
+          const myHNAUTSBalanceOfParsed = parseInt(myHNAUTSBalanceOf._hex, 16);
+          setMyHNAUTSBalanceOf(myHNAUTSBalanceOfParsed);
+    
+          const myWHNAUTSName = await myContractWHNAUTS.name();
+          setMyWHNAUTSName(myWHNAUTSName);
+
+          const myWHNAUTSSymbol = await myContractWHNAUTS.symbol();
+          setMyWHNAUTSSymbol(myWHNAUTSSymbol);
+
+          const myWHNAUTSBalanceOf = await myContractWHNAUTS.balanceOf(myAddress);
+          const myWHNAUTSBalanceOfParsed = parseInt(myWHNAUTSBalanceOf._hex, 16);
+          setMyWHNAUTSBalanceOf(myWHNAUTSBalanceOfParsed);
+    }
+  }
+
   return (
     <main className="main">
       <div className="container">
@@ -44,15 +135,19 @@ export default function Home() {
           </div>
         </div>
 
-        <h2>My Tokens</h2>
         <div className="grid">
           <div className="card">
-            <p>{myNativeToken?.name} : {myNativeToken?.displayValue} {myNativeToken?.symbol}</p><br/>
+            <p>{myHNAUTSName} : {myHNAUTSBalanceOfParsed} {myHNAUTSSymbol}</p>
+            <p>0xD7745A515beDD91eE9024b6C31dc1E75a10dC618</p>
+            <br/>
+            <p>{myWHNAUTSName} : {myWHNAUTSBalanceOfParsed} {myWHNAUTSSymbol}</p>
+            <p>0xC29Ca7c72Da0873693BF2d686544C17222EC2659</p><br/>
             <p>{myHOGBalance?.name} : {myHOGBalance?.displayValue} {myHOGBalance?.symbol}</p>
             <p>0xa0F92Df550E1E12452C250465E54fDF77B9cf64d</p>
           </div>
         </div>
         <hr/>
+
         <div className="grid">
           <div className="card">
             <h3>1USDC</h3>
