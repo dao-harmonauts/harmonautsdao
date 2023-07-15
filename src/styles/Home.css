@@ -89,7 +89,8 @@
   text-decoration: none;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 440px;
+  width: 1200px;
+  height: 200px;
   overflow: none;
   border: none;
 }
