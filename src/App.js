@@ -124,7 +124,7 @@ export default function Home() {
       <div className="container">
         <div className="header">
           <h1 className="title">Harmonauts DAO</h1>
-          <p className="description">Get started by connecting your MetMask Wallet to Harmony One BlockChain</p>
+          <p className="description">Get started by connecting your MetaMask Wallet to Harmony One BlockChain</p>
           <div className="connect">
             <ConnectWallet
               dropdownPosition={{
