@@ -124,15 +124,10 @@ export default function Home() {
       <div className="container">
         <div className="header">
           <h1 className="title">Harmonauts DAO</h1>
-          <p className="description">Get started by connecting your MetaMask Wallet to Harmony One BlockChain</p>
-          <div className="connect">
-            <ConnectWallet
-              dropdownPosition={{
-                side: "bottom",
-                align: "center",
-              }}
-            />
-          </div>
+          <p className="description">1. Connect your Wallet</p>
+          <div className="connect"><ConnectWallet/></div>
+          <p className="description">2. Render your Assets</p>
+          <div className="connect"><button onClick={() => fetchInfo()}>Render Assets</button></div>
         </div>
 
         <div className="grid">
