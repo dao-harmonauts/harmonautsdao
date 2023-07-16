@@ -124,7 +124,7 @@ export default function Home() {
       <div className="container">
         <div className="header">
           <h1 className="title">Harmonauts DAO</h1>
-          <p className="description">1. Connect your Wallet</p>
+          <p className="description">1. Connect your Wallet to Harmony blockchain</p>
           <div className="connect"><ConnectWallet/></div>
           <p className="description">2. Render your Assets</p>
           <div className="connect"><button onClick={() => fetchInfo()}>Render Assets</button></div>
@@ -149,11 +149,12 @@ export default function Home() {
             <p>{my1USDCBalance?.name} : {my1USDCBalance?.displayValue} {my1USDCBalance?.symbol}</p>
             <p>0x985458E523dB3d53125813eD68c274899e9DfAb4</p><br/>
             <p>{myLPHOG1USDCBalance?.name} : {myLPHOG1USDCBalance?.displayValue} {myLPHOG1USDCBalance?.symbol}</p>
-            <p>0xff7674AB8dc1FF39E5226555C5Fd4919A246A538</p>
+            <p>0xff7674AB8dc1FF39E5226555C5Fd4919A246A538</p><br/>
+            <p><a href="https://harmony.sonicswap.io/swap#/swap?inputCurrency=0x985458E523dB3d53125813eD68c274899e9DfAb4&outputCurrency=0xa0F92Df550E1E12452C250465E54fDF77B9cf64d">Swap 1USDC -> HOG</a> | <a href="https://harmony.sonicswap.io/swap#/add/0xa0F92Df550E1E12452C250465E54fDF77B9cf64d/0x985458E523dB3d53125813eD68c274899e9DfAb4">Add Liquidity</a></p>
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" title="1USDC" src="https://dexscreener.com/harmony/0xff7674AB8dc1FF39E5226555C5Fd4919A246A538?embed=1&theme=dark"/>
+          <iframe height="800" width="1250" title="1USDC" src="https://dexscreener.com/harmony/0xff7674AB8dc1FF39E5226555C5Fd4919A246A538?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -162,11 +163,12 @@ export default function Home() {
             <p>{myWONEBalance?.name} : {myWONEBalance?.displayValue} {myWONEBalance?.symbol}</p>
             <p>0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a</p><br/>
             <p>{myLPHOGWONEBalance?.name} : {myLPHOGWONEBalance?.displayValue} {myLPHOGWONEBalance?.symbol}</p>
-            <p>0x0561827bdcc40a1d3556f5aa32022c81c2175ee8</p>
+            <p>0x0561827bdcc40a1d3556f5aa32022c81c2175ee8</p><br/>
+            <p><a href="https://harmony.sonicswap.io/swap#/swap?inputCurrency=0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a&outputCurrency=0xa0F92Df550E1E12452C250465E54fDF77B9cf64d">Swap WONE -> HOG</a> | <a href="https://harmony.sonicswap.io/swap#/add/0xa0F92Df550E1E12452C250465E54fDF77B9cf64d/0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a">Add Liquidity</a></p>
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" title="WONE" src="https://dexscreener.com/harmony/0x0561827bdcc40a1d3556f5aa32022c81c2175ee8?embed=1&theme=dark"/>
+          <iframe height="800" width="1250" title="WONE" src="https://dexscreener.com/harmony/0x0561827bdcc40a1d3556f5aa32022c81c2175ee8?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -175,11 +177,12 @@ export default function Home() {
             <p>{mySONICBalance?.name} : {mySONICBalance?.displayValue} {mySONICBalance?.symbol}</p>
             <p>0x1e05C8B69e4128949FcEf16811a819eF2f55D33E</p><br/>
             <p>{myLPSonicBalance?.name} : {myLPSonicBalance?.displayValue} {myLPSonicBalance?.symbol}</p>
-            <p>0xc01537d6d2305408d6045c1B96e88174cbd32b5b</p>
+            <p>0xc01537d6d2305408d6045c1B96e88174cbd32b5b</p><br/>
+            <p><a href="https://harmony.sonicswap.io/swap#/swap?inputCurrency=0x1e05C8B69e4128949FcEf16811a819eF2f55D33E&outputCurrency=0xa0F92Df550E1E12452C250465E54fDF77B9cf64d">Swap SONIC -> HOG</a> | <a href="https://harmony.sonicswap.io/swap#/add/0xa0F92Df550E1E12452C250465E54fDF77B9cf64d/0x1e05C8B69e4128949FcEf16811a819eF2f55D33E">Add Liquidity</a> | <a href="https://harmony.sonicswap.io/swap#/staking/0x1e05C8B69e4128949FcEf16811a819eF2f55D33E/0xa0F92Df550E1E12452C250465E54fDF77B9cf64d">Stake LP Tokens</a></p>
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" title="SONIC" src="https://dexscreener.com/harmony/0xc01537d6d2305408d6045c1B96e88174cbd32b5b?embed=1&theme=dark"/>
+          <iframe height="800" width="1250" title="SONIC" src="https://dexscreener.com/harmony/0xc01537d6d2305408d6045c1B96e88174cbd32b5b?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -188,11 +191,12 @@ export default function Home() {
             <p>{myWaruBalance?.name} : {myWaruBalance?.displayValue} {myWaruBalance?.symbol}</p>
             <p>0x59fA612968F54080aba370Fd822343c43F23C874</p><br/>
             <p>{myLPWaruBalance?.name} : {myLPWaruBalance?.displayValue} {myLPWaruBalance?.symbol}</p>
-            <p>0x752630C2E39eB9D81fA3F263cF9A9cB81C81CD67</p>
+            <p>0x752630C2E39eB9D81fA3F263cF9A9cB81C81CD67</p><br/>
+            <p><a href="https://harmony.sonicswap.io/swap#/swap?inputCurrency=0x59fA612968F54080aba370Fd822343c43F23C874&outputCurrency=0xa0F92Df550E1E12452C250465E54fDF77B9cf64d">Swap WARU -> HOG</a> | <a href="https://harmony.sonicswap.io/swap#/add/0xa0F92Df550E1E12452C250465E54fDF77B9cf64d/0x59fA612968F54080aba370Fd822343c43F23C874">Add Liquidity</a></p>
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" title="WARU" src="https://dexscreener.com/harmony/0x752630C2E39eB9D81fA3F263cF9A9cB81C81CD67?embed=1&theme=dark"/>
+          <iframe height="800" width="1250" title="WARU" src="https://dexscreener.com/harmony/0x752630C2E39eB9D81fA3F263cF9A9cB81C81CD67?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -201,11 +205,12 @@ export default function Home() {
             <p>{myHoundBalance?.name} : {myHoundBalance?.displayValue} {myHoundBalance?.symbol}</p>
             <p>0x58055c005526a4cF357bE16180d9cfc9d8daEc8c</p><br/>
             <p>{myLPHOGHoundBalance?.name} : {myLPHOGHoundBalance?.displayValue} {myLPHOGHoundBalance?.symbol}</p>
-            <p>0x05c14496aAe75106aFA5A8E5204A8f0C61f377d5</p>
+            <p>0x05c14496aAe75106aFA5A8E5204A8f0C61f377d5</p><br/>
+            <p><a href="https://harmony.sonicswap.io/swap#/swap?inputCurrency=0x58055c005526a4cF357bE16180d9cfc9d8daEc8c&outputCurrency=0xa0F92Df550E1E12452C250465E54fDF77B9cf64d">Swap HOUND -> HOG</a> | <a href="https://harmony.sonicswap.io/swap#/add/0xa0F92Df550E1E12452C250465E54fDF77B9cf64d/0x58055c005526a4cF357bE16180d9cfc9d8daEc8c">Add Liquidity</a></p>
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" title="HOUND" src="https://dexscreener.com/harmony/0x05c14496aAe75106aFA5A8E5204A8f0C61f377d5?embed=1&theme=dark"/>
+          <iframe height="800" width="1250" title="HOUND" src="https://dexscreener.com/harmony/0x05c14496aAe75106aFA5A8E5204A8f0C61f377d5?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -214,11 +219,12 @@ export default function Home() {
             <p>{myNeuronsBalance?.name} : {myNeuronsBalance?.displayValue} {myNeuronsBalance?.symbol}</p>
             <p>0xFb5e55b89dbeAF01797Be3F744bd556E4d9FB259</p><br/>
             <p>{MyLPNeuronsSSBalance?.name} : {MyLPNeuronsSSBalance?.displayValue} {MyLPNeuronsSSBalance?.symbol}</p>
-            <p>0x32a4fcCc27BE6873541c3667EED11628490aDCa2</p>
+            <p>0x32a4fcCc27BE6873541c3667EED11628490aDCa2</p><br/>
+            <p><a href="https://harmony.sonicswap.io/swap#/swap?inputCurrency=0xFb5e55b89dbeAF01797Be3F744bd556E4d9FB259&outputCurrency=0xa0F92Df550E1E12452C250465E54fDF77B9cf64d">Swap NEURONS -> HOG</a> | <a href="https://harmony.sonicswap.io/swap#/add/0xa0F92Df550E1E12452C250465E54fDF77B9cf64d/0xFb5e55b89dbeAF01797Be3F744bd556E4d9FB259">Add Liquidity</a></p>
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" title="NEURONS" src="https://dexscreener.com/harmony/0x32a4fcCc27BE6873541c3667EED11628490aDCa2?embed=1&theme=dark"/>
+          <iframe height="800" width="1250" title="NEURONS" src="https://dexscreener.com/harmony/0x32a4fcCc27BE6873541c3667EED11628490aDCa2?embed=1&theme=dark"/>
         </div>
         <hr/>
         <div className="grid">
@@ -227,11 +233,12 @@ export default function Home() {
             <p>{myWCBalance?.name} : {myWCBalance?.displayValue} {myWCBalance?.symbol}</p>
             <p>0xA4fE0e18506B3D171c7674698991DfAF238621a6</p><br/>
             <p>{MyLPWCBalance?.name} : {MyLPWCBalance?.displayValue} {MyLPWCBalance?.symbol}</p>
-            <p>0x8fE16B69d13577Cac8A3178672935C6e3512913d</p>
+            <p>0x8fE16B69d13577Cac8A3178672935C6e3512913d</p><br/>
+            <p><a href="https://harmony.sonicswap.io/swap#/swap?inputCurrency=0xA4fE0e18506B3D171c7674698991DfAF238621a6&outputCurrency=0xa0F92Df550E1E12452C250465E54fDF77B9cf64d">Swap WEEDCOMMERCE -> HOG</a> | <a href="https://harmony.sonicswap.io/swap#/add/0xa0F92Df550E1E12452C250465E54fDF77B9cf64d/0xA4fE0e18506B3D171c7674698991DfAF238621a6">Add Liquidity</a></p>
           </div>
         </div>
         <div id="dexscreener-embed">
-          <iframe height="800" width="1400" title="WEEDCOMMERCE" src="https://dexscreener.com/harmony/0x8fE16B69d13577Cac8A3178672935C6e3512913d?embed=1&theme=dark"/>
+          <iframe height="800" width="1250" title="WEEDCOMMERCE" src="https://dexscreener.com/harmony/0x8fE16B69d13577Cac8A3178672935C6e3512913d?embed=1&theme=dark"/>
         </div>
 
         {/* <div className="grid">
